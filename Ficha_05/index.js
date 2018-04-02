@@ -84,7 +84,7 @@ function circulo() {
             return 2 * Math.PI * this.raio
         }
 
-        aumentarRaio(valor){
+        aumentarRaio(valor) {
             let inc = this.raio * (valor * 10)
             return inc
         }
@@ -98,7 +98,96 @@ function circulo() {
     console.log(myCirc.getCircunferencia())
 
     show("Area: " + myCirc.getArea() + "\n" + "Circunferencia: " + myCirc.getCircunferencia()
-            + "\n" + "Circunferencia: " + myCirc.aumentarRaio(5))
+        + "\n" + "Circunferencia: " + myCirc.aumentarRaio(5))
+}
+
+/*
+    Exercicio 2
+*/
+function ventoinha() {
+
+    const Velocidade = {
+        baixa: 1,
+        media: 2,
+        alta: 3
+    }
+
+    class Ventoinha {
+        constructor(velocidade, ligado) {
+            this.velocidade = Velocidade.baixa
+            this.ligado = false
+        }
+
+        get velocidade() {
+            return this._velocidade
+        }
+
+        set velocidade(novaVeloc) {
+            this._velocidade = novaVeloc
+        }
+
+        get ligado() {
+            return this._ligado
+        }
+
+        set ligado(novoligado) {
+            this._ligado = novoligado
+        }
+
+        toString() {
+            if (this.ligado)
+                return `A ventoinha está ligada com a velocidade ${this.velocidade}`
+            else
+                return "A ventoinha está desligada"
+        }
+    }
+
+    let ventoinha1 = new Ventoinha()
+    let ventoinha2 = new Ventoinha()
+
+    ventoinha2.ligado = true
+    ventoinha2.velocidade = Velocidade.alta
+    show(ventoinha1.toString() + "\n" + ventoinha2.toString())
+
+}
+
+/*
+    Exercicio 4
+*/
+function dado() {
+
+    class Dado {
+        constructor() {
+            this._faces = 6
+            this.valorFace = 1
+        }
+
+        get valorFace() {
+            return this._valorFace
+        }
+        set valorFace(novoValor) {
+            if (novoValor > 0 && novoValor < this._faces) {
+                this._valorFace = novoValor
+            }
+            else {
+                show("Valor inválido para a face do dado")
+            }
+        }
+
+        rolar() {
+            this.valorFace = Math.round((Math.random() * this._faces - 1) + 1)
+        }
+
+        getQuantidadeFaces() {
+            this._faces
+        }
+    }
+
+    let newDado = new Dado()
+
+    newDado.rolar()
+
+    show(newDado._valorFace)
 }
 
 /*
@@ -174,12 +263,12 @@ function paises() {
             return maior
         }
 
-        static comparar(a,b){
+        static comparar(a, b) {
             if (a.nome > b.nome) {
                 return 1
-            } if(a.nome < b.nome){
+            } if (a.nome < b.nome) {
                 return -1
-            }else return 0
+            } else return 0
         }
     }
 
@@ -192,7 +281,7 @@ function paises() {
     paises.push(pais1, pais2, pais3, pais4, pais5)
     show("Maior Area: " + Pais.getPaisMaiorArea() + "\n" + "Maior População: " + Pais.getPaisMaiorPopulacao() +
         "\n" + "Maior Densidade: " + Pais.getPaisMaiorDensidadePopulacional())
-    
+
     //Ordenação original
     for (let i = 0; i < paises.length; i++) {
         console.log(paises.nome)
