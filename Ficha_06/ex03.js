@@ -51,8 +51,10 @@ window.onload = function () {
         // Previne do form não ser submetido (isso faria com que a página fizesse um refresh)
         event.preventDefault()
 
+        
+        removerFilme()
     })
-
+    
 }
 
 function atualizarTabela() {
@@ -63,15 +65,24 @@ function atualizarTabela() {
     txt = "<tr><th>TÍTULO</th><th>ANO</th><th>GÉNERO</th></tr>"
 
     for (let i = 0; i < filmes.length; i++) {
-        txt += "<tr><td scope='row'>" + filmes[i].titulo + "</td><td>" + filmes[i].ano + "</td><td>" + filmes[i].genero + "</td><td><i class='fa fa-trash-o'></i></td></tr>"
+        txt += "<tr><td scope='row'>" + filmes[i].titulo + "</td><td>" + filmes[i].ano + "</td><td>" + filmes[i].genero + "</td><td><a href='#' ><i id='rem' class='fa fa-trash-o'></i></a></td></tr>"
 
     }
 
     tabela.innerHTML = txt
-
+    
 }
 
+function removerFilme() {
 
-
-
-
+    let filmeSelec =  document.getElementById('rem')
+   
+    filmeSelec.addEventListener("click", function () {
+        
+        for (let i = 0; i < filmes.length; i++) {
+            filmes.splice(i,1)     
+        }
+        atualizarTabela()
+        console.log(filmes)
+    })
+}

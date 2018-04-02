@@ -11,45 +11,47 @@
     <title>Exercicio 3</title>
 </head>
 
-<body>
+<body style="background-color: aquamarine">
     <div class="container mt-5">
         <div>
             <h2>Filmes</h2>
         </div>
         <div class="mt-5">
             <form id="myForm" action="">
-                <div class="row">
-                    <div class="col">
-                        Titulo :
-                        <input type="text" id="titulo" name="ftitulo" maxlength="50" required>
-                        <p id="demo"></p>
+
+                <div class="form-group">
+                    <label for="titulo">Titulo :</label>
+                    <input class="form-control" type="text" id="titulo" name="ftitulo" maxlength="50" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="data">Ano :</label>
+                    <input class="form-control" type="number" id="data" name="fano" min="1900" max="2018" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="genero">Género :</label>
+                    <select class="form-control" name="fgenero" id="generos" required>
+                        <option value="Desconhecido">Escolher</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Animação">Animação</option>
+                        <option value="Aventura">Aventura</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Ação">Ação</option>
+                    </select>
+
+                    <div class="mt-3">
+                            <button id="btnsubmit" class="btn" type="submit">Adicionar </button>
                     </div>
-                    <div class="col">
-                        Ano :
-                        <input type="number" id="data" name="fano" min="1900" max="2018" required>
-                    </div>
-                    <div class="col">
-                        Género :
-                        <select name="fgenero" id="generos" required>
-                            <option value="Desconhecido">Escolher</option>
-                            <option value="Terror">Terror</option>
-                            <option value="Romance">Romance</option>
-                            <option value="Animação">Animação</option>
-                            <option value="Aventura">Aventura</option>
-                            <option value="Thriller">Thriller</option>
-                            <option value="Ação">Ação</option>
-                        </select>
-                    </div>
-                    <div class="col">
-                        <button id="btnsubmit" class="btn" type="submit">Adicionar </button>
-                    </div>
+                    
                 </div>
             </form>
         </div>
-    </div>
-    <div class="mt-5 pt-3">
-        <table class="table" id="table"></table>
-    </div>
+
+        <div class="mt-5 pt-3">
+            <table class="table" id="table"></table>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
