@@ -51,8 +51,6 @@ window.onload = function () {
         // Previne do form não ser submetido (isso faria com que a página fizesse um refresh)
         event.preventDefault()
 
-        
-        removerFilme()
     })
     
 }
@@ -65,24 +63,22 @@ function atualizarTabela() {
     txt = "<tr><th>TÍTULO</th><th>ANO</th><th>GÉNERO</th></tr>"
 
     for (let i = 0; i < filmes.length; i++) {
-        txt += "<tr><td scope='row'>" + filmes[i].titulo + "</td><td>" + filmes[i].ano + "</td><td>" + filmes[i].genero + "</td><td><a href='#' ><i id='rem' class='fa fa-trash-o'></i></a></td></tr>"
+        txt += "<tr><td scope='row'>" + filmes[i].titulo + "</td><td>" + filmes[i].ano + "</td><td>" + filmes[i].genero + "</td><td><a class='remover' ><i class='fa fa-trash-o'></i></a></td></tr>"
 
     }
 
     tabela.innerHTML = txt
     
-}
+    let rowSelec = document.getElementsByClassName("remover")
 
-function removerFilme() {
-
-    let filmeSelec =  document.getElementById('rem')
-   
-    filmeSelec.addEventListener("click", function () {
+    for (let i = 0; i < rowSelec.length; i++) {
         
-        for (let i = 0; i < filmes.length; i++) {
-            filmes.splice(i,1)     
-        }
-        atualizarTabela()
-        console.log(filmes)
-    })
+        rowSelec[i].addEventListener("click", function () {
+            
+            filmes.splice(i,1)
+
+            atualizarTabela()
+        })
+    }
 }
+
