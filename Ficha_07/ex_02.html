@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="ex_02.js"></script>
+    <title>Exercicio 2 Ficha 7</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div align="center">
+            <h3 style="color:orangered">ESMAD RUNNING</h3>
+        </div>
+        <div align="center">
+            <img src="img.png" alt="running" style="width:700px">
+        </div>
+        <div>
+            <h5>Regista-te</h5>
+        </div>
+        <div class="container mt-3">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" maxlength="50" autofocus required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Morada</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label for="name">Codigo Postal</label>
+                    <input type="text" name="c_postal" maxlength="8" minlength="8" id="">
+                </div>
+                <div class="form-group">
+                    <label for="name">Telemóvel</label>
+                    <input type="number" required placeholder="9********">
+                </div>
+                <div class="form-group">
+                    <label for="name">Data Nascimento</label>
+                    <input type="date" name="" id="dataN"  required>
+                    <p id="date" style="color: red"></p>
+                </div>
+                <div class="form-group">
+                    <label for="name">Localidade</label>
+                    <select name="" id="">
+                        <option value="">Escolher</option>
+                        <option value="Coimbra">Coimbra</option>
+                        <option value="Évora">Evora</option>
+                        <option value="Faro">Faro</option>
+                        <option value="Porto">Porto</option>
+                        <option value="Lisboa">Lisboa</option>
+                        <option value="Braga">Braga</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Sexo</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+                        <label class="form-check-label" for="gridRadios1">M</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <label class="form-check-label" for="gridRadios2">F</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">E-mail</label>
+                    <input type="email" name="" id="" required accesskey="shift + alt + e">
+                </div>
+                <div class="form-group">
+                    <label for="name">Utilizador</label>
+                    <input type="text" autocomplete="additional-name" required>
+
+                    <label for="name">Password</label>
+                    <input type="password" name="" id="pass" autocomplete="current-password" required>
+
+                    <label for="name">Confirmar Password</label>
+                    <input type="password" name="" id="confpass" autocomplete="current-password" required>
+                    <p id="valpass" style="color: red"></p>
+                </div>
+                <div class="form-group">
+                    <label for="name">Tamanho Camisola</label>
+                    <select name="" id="">
+                        <option value="Desconhecido">Escolher</option>
+                        <option value="">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name">Pagina pessoal</label>
+                    <input type="url" name="" id="" placeholder="URL">
+                </div>
+                <div class="form-group">
+                    <label for="name">Nº Sapatilha</label>
+                    <input type="number" id="" min="30" max="50">
+                </div>
+                <div class="form-group">
+                    <label for="name">Principais Desportos Praticados</label>
+                    <select name="" id="">
+                        <option value="Nenhum">Escolher</option>
+                        <option value="Running">Running</option>
+                        <option value="Cycling">Cycling</option>
+                        <option value="Natação">Natação</option>
+                        <option value="Futebol">Futebol</option>
+                        <option value="Vela">Vela</option>
+                        <option value="Ténis">Ténis</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name">Observações</label>
+                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Registar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

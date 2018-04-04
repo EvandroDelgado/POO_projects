@@ -1,6 +1,6 @@
 window.onload = function () {
     
-    document.getElementById("btnSubmit").addEventListener("submit", function () {
+    document.getElementById("btnSubmit").addEventListener("click", function () {
         let myEmail = document.getElementById("email")
         let myPass = document.getElementById("password")
 
