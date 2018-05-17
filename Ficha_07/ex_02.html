@@ -23,31 +23,31 @@
             <h5>Regista-te</h5>
         </div>
         <div class="container mt-3">
-            <form action="">
+            <form id="myForm" action="">
                 <div class="form-group">
-                    <label for="name">Nome</label>
-                    <input type="text" maxlength="50" autofocus required>
+                    <label for="txtNome">Nome</label>
+                    <input type="text" id="txtNome" maxlength="50" autofocus required>
                 </div>
                 <div class="form-group">
-                    <label for="name">Morada</label>
-                    <input type="text">
+                    <label for="txtMorada">Morada</label>
+                    <input type="text" id="txtMorada">
                 </div>
                 <div class="form-group">
-                    <label for="name">Codigo Postal</label>
-                    <input type="text" name="c_postal" maxlength="8" minlength="8" id="">
+                    <label for="c_postal">Codigo Postal</label>
+                    <input type="text" id="c_postal" maxlength="8" minlength="8" id="">
                 </div>
                 <div class="form-group">
                     <label for="name">Telemóvel</label>
-                    <input type="number" required placeholder="9********">
+                    <input type="number" min="900000000" max="999999999" required placeholder="9********">
                 </div>
                 <div class="form-group">
                     <label for="name">Data Nascimento</label>
-                    <input type="date" name="" id="dataN"  required>
+                    <input type="date" name="" id="dataN" required>
                     <p id="date" style="color: red"></p>
                 </div>
                 <div class="form-group">
-                    <label for="name">Localidade</label>
-                    <select name="" id="">
+                    <label for="loc">Localidade</label>
+                    <select name="" id="loc">
                         <option value="">Escolher</option>
                         <option value="Coimbra">Coimbra</option>
                         <option value="Évora">Evora</option>
@@ -71,23 +71,23 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="name">E-mail</label>
-                    <input type="email" name="" id="" required accesskey="shift + alt + e">
+                    <label for="txtEmail">E-mail</label>
+                    <input type="email" name="" id="txtEmail" required accesskey="shift + alt + e">
                 </div>
                 <div class="form-group">
-                    <label for="name">Utilizador</label>
-                    <input type="text" autocomplete="additional-name" required>
+                    <label for="user">Utilizador</label>
+                    <input type="text" id="user" required>
 
-                    <label for="name">Password</label>
+                    <label for="pass">Password</label>
                     <input type="password" name="" id="pass" autocomplete="current-password" required>
 
-                    <label for="name">Confirmar Password</label>
+                    <label for="confpass">Confirmar Password</label>
                     <input type="password" name="" id="confpass" autocomplete="current-password" required>
                     <p id="valpass" style="color: red"></p>
                 </div>
                 <div class="form-group">
-                    <label for="name">Tamanho Camisola</label>
-                    <select name="" id="">
+                    <label for="tamanhocamisa">Tamanho Camisola</label>
+                    <select name="" id="tamanhocamisa">
                         <option value="Desconhecido">Escolher</option>
                         <option value="">S</option>
                         <option value="M">M</option>
@@ -96,32 +96,32 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="name">Pagina pessoal</label>
-                    <input type="url" name="" id="" placeholder="URL">
+                    <label for="url">Pagina pessoal</label>
+                    <input type="url" name="" id="url" placeholder="https//:">
                 </div>
                 <div class="form-group">
-                    <label for="name">Nº Sapatilha</label>
-                    <input type="number" id="" min="30" max="50">
+                    <label for="numSapat">Nº Sapatilha</label>
+                    <input type="number" id="numSapat" min="30" max="50">
                 </div>
                 <div class="form-group">
-                    <label for="name">Principais Desportos Praticados</label>
-                    <select name="" id="">
-                        <option value="Nenhum">Escolher</option>
-                        <option value="Running">Running</option>
-                        <option value="Cycling">Cycling</option>
-                        <option value="Natação">Natação</option>
-                        <option value="Futebol">Futebol</option>
-                        <option value="Vela">Vela</option>
-                        <option value="Ténis">Ténis</option>
-                        <option value="Outros">Outros</option>
-                    </select>
+                    <label for="">Principais Desportos Praticados</label>
+                    <br>
+                    Running
+                    <input type="checkbox" name="" id="Running"> Cycling
+                    <input type="checkbox" name="" id="Cycling"> Natação
+                    <input type="checkbox" name="" id="Natação"> Futebol
+                    <input type="checkbox" name="" id="Futebol"> Vela
+                    <input type="checkbox" name="" id="Vela"> Ténis
+                    <input type="checkbox" name="" id="Ténis"> Outros
+                    <input type="checkbox" name="" id="Outros">
+
                 </div>
                 <div class="form-group">
-                    <label for="name">Observações</label>
-                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                    <label for="obs">Observações</label>
+                    <textarea name="" id="obs" cols="30" rows="5"></textarea>
                 </div>
                 <div class="form-group">
-                    <button type="submit">Registar</button>
+                    <input id="btnLogin" type="submit" value="Registar">
                 </div>
 
             </form>
