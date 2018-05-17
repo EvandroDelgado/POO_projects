@@ -1,0 +1,156 @@
+body{
+    font-family: "Trebuchet MS";
+    background-image: url(IMG/img7.jpg);
+    background-repeat:repeat;
+} 
+
+#logo{
+    width: 300px;
+}
+
+.fab{
+    font-size: 30px;
+    color: orangered;
+}
+
+#esmad{
+    width: 220px;
+}
+
+a.nav-link{
+    color: white;
+}
+
+#idlogin,#divCurso,#divFormad{
+    color: white;
+}
+
+#idRegister{
+    color: white;
+}
+
+#idLogout{
+    color: white;
+}
+
+#salutUser{
+    color: white
+}
+
+#card1{
+    height: 488px;
+    width: 650px;
+    
+}
+
+.card{
+    height: 240px;
+    width: 400px;
+}
+
+#obs{
+    font-size: 10px;
+}
+
+.card-img-top{
+    height: 150px;
+    width: 100%;
+}
+
+.card-img{
+    height: 300px;
+    width: 100%;
+}
+
+#addCurso{
+    background-color: orangered;
+    color: white;
+}
+
+#addFormador{
+    background-color: orangered;
+    color: white;
+}
+
+#idCursoImg{
+    height: 250px;
+    width: 100%;
+}
+
+#logoCursos{
+    width: 200px;
+}
+
+#idvoltar{
+    color: orangered;
+}
+
+.card-body{
+    background-color: rgb(77, 77, 77, 0.1);
+}
+
+div.polaroid {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    color: white;
+    background-color: orangered;
+    cursor:pointer;
+}
+
+.card-image-top{
+    height: 200px;
+    width: 100%;
+}
+
+.cardView h6{
+    font-weight:bold;
+}
+.cardView a{
+    font-weight:100;
+}
+
+/* css da model ver formadores */
+
+    .highlight  {
+        width: 600px;
+        color: white;
+        background:rgb(255, 68, 0,0.9);
+        border-radius: 10px;
+        padding: 3%;
+        
+        }
+        
+    .highlight img {
+        
+        float: left;
+        width: 200px;
+        height: 200px; 
+        margin: 10px;
+        }
+        
+        
+    .highlight button {
+       margin-left: 1%;
+        float: right;
+    }
+    
+    .highlight h2 {
+        color: white;
+        padding-bottom: 2%;
+        border-bottom: 2px dashed rgba(255, 255, 255, 0.41);
+        font-size:20px;
+        text-align : center;
+        text-transform: uppercase;
+        }
+        
+    .highlight a,h6 {
+        color: white;
+    }
+
+    h2{
+        border-bottom: 2px dashed rgba(255, 255, 255, 0.41);
+        padding-bottom: 2%;
+    }
+
+    .modal-dialog.modal-notify.modal-primary .badge,.modal-dialog.modal-notify.modal-primary .modal-header{background-color:#4285f4}body.modal-open{overflow:auto;padding-right:0!important}body.scrollable{overflow-y:auto}.modal-dialog .modal-content{-webkit-box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);border:0;-webkit-border-radius:.125rem;border-radius:.125rem}.modal-dialog .modal-content .modal-header{-webkit-border-top-left-radius:.125rem;border-top-left-radius:.125rem;-webkit-border-top-right-radius:.125rem;border-top-right-radius:.125rem}.modal-dialog .btn .fa{color:#fff!important}.modal-dialog [class*=btn-outline-] .fa{color:inherit!important}.modal-dialog.cascading-modal{margin-top:10%}.modal-dialog.cascading-modal .close{opacity:1;text-shadow:none;color:#fff;outline:0}.modal-dialog.cascading-modal .modal-header{-webkit-box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);margin:-2rem 1rem 1rem;border:none;-webkit-border-radius:.125rem;border-radius:.125rem;padding:1.5rem;text-align:center}.modal-dialog.cascading-modal .modal-header .close{margin-right:1rem}.modal-dialog.cascading-modal .modal-header .title{margin-bottom:0;width:100%;font-size:1.25rem}.modal-dialog.cascading-modal .modal-header .title .fa{margin-right:9px}.modal-dialog.cascading-modal .modal-header .social-buttons{margin-top:1.5rem}.modal-dialog.cascading-modal .modal-header .social-buttons a{font-size:1rem}.modal-dialog.cascading-modal .modal-c-tabs .nav-tabs{-webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);margin:-1.5rem 1rem 0}.modal-dialog.cascading-modal .modal-c-tabs .tab-content{padding:1.7rem 0 0}.modal-dialog.cascading-modal .nav-tabs{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.modal-dialog.cascading-modal .nav-tabs li{-webkit-flex:1;-ms-flex:1;flex:1}.modal-dialog.cascading-modal .nav-tabs li a{text-align:center}.modal-dialog.cascading-modal .modal-body,.modal-dialog.cascading-modal .modal-footer{padding-left:2rem;padding-right:2rem;color:#616161}.modal-dialog.cascading-modal .modal-body .additional-option,.modal-dialog.cascading-modal .modal-footer .additional-option{margin-top:1rem;text-align:center}.modal-dialog.cascading-modal.modal-avatar{margin-top:6rem}.modal-dialog.cascading-modal.modal-avatar .modal-header{-webkit-box-shadow:none;box-shadow:none;margin:-6rem 0 -1rem}.modal-dialog.cascading-modal.modal-avatar .modal-header img{width:130px;-webkit-box-shadow:0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);box-shadow:0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);margin-left:auto;margin-right:auto}.modal-dialog.modal-notify .heading{margin:0;padding:.3rem;font-size:1.15rem;color:#fff}.modal-dialog.modal-notify .modal-header{-webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);border:0}.modal-dialog.modal-notify .close{opacity:1}.modal-dialog.modal-notify .modal-body{padding:1.5rem;color:#616161}.modal-dialog.modal-notify.modal-primary .fa{color:#4285f4}.modal-dialog.modal-notify.modal-danger .badge,.modal-dialog.modal-notify.modal-danger .modal-header{background-color:#ff3547}.modal-dialog.modal-notify.modal-danger .fa{color:#ff3547}.modal-dialog.modal-notify.modal-warning .badge,.modal-dialog.modal-notify.modal-warning .modal-header{background-color:#fb3}.modal-dialog.modal-notify.modal-warning .fa{color:#fb3}.modal-dialog.modal-notify.modal-success .badge,.modal-dialog.modal-notify.modal-success .modal-header{background-color:#00c851}.modal-dialog.modal-notify.modal-success .fa{color:#00c851}.modal-dialog.modal-notify.modal-info .badge,.modal-dialog.modal-notify.modal-info .modal-header{background-color:#33b5e5}.modal-dialog.modal-notify.modal-info .fa{color:#33b5e5}.modal{padding-right:0!important}@media (min-width:768px){.modal .modal-dialog.modal-top{top:0}.modal .modal-dialog.modal-left{left:0}.modal .modal-dialog.modal-right{right:0}.modal .modal-dialog.modal-bottom{bottom:0}.modal .modal-dialog.modal-top-left{top:10px;left:10px}.modal .modal-dialog.modal-top-right{top:10px;right:10px}.modal .modal-dialog.modal-bottom-left{bottom:10px;left:10px}.modal .modal-dialog.modal-bottom-right{bottom:10px;right:10px}}.modal.fade.top:not(.show) .modal-dialog{-webkit-transform:translate3d(0,-25%,0);transform:translate3d(0,-25%,0)}.modal.fade.left:not(.show) .modal-dialog{-webkit-transform:translate3d(-25%,0,0);transform:translate3d(-25%,0,0)}.modal.fade.right:not(.show) .modal-dialog{-webkit-transform:translate3d(25%,0,0);transform:translate3d(25%,0,0)}.modal.fade.bottom:not(.show) .modal-dialog{-webkit-transform:translate3d(0,25%,0);transform:translate3d(0,25%,0)}@media (min-width:992px){.modal .modal-fluid,.modal .modal-frame{width:100%;max-width:100%}.modal.modal-scrolling{position:relative}.modal.modal-scrolling .modal-dialog{position:fixed;z-index:1050}.modal.modal-content-clickable{top:auto;bottom:auto}.modal.modal-content-clickable .modal-dialog{position:fixed}.modal .modal-fluid .modal-content{width:100%}.modal .modal-frame{position:absolute;margin:0}.modal .modal-frame.modal-bottom{bottom:0}.modal .modal-full-height{position:absolute;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin:0;width:400px;height:auto;top:0;right:0}.modal .modal-full-height.modal-bottom,.modal .modal-full-height.modal-top{display:block;width:100%;max-width:100%;height:auto}.modal .modal-full-height.modal-top{bottom:auto}.modal .modal-full-height.modal-bottom{top:auto}.modal .modal-full-height .modal-content{width:100%}.modal .modal-full-height.modal-lg{width:90%;max-width:90%}}@media (min-width:992px) and (min-width:992px){.modal .modal-full-height.modal-lg{width:800px;max-width:800px}}@media (min-width:992px) and (min-width:1200px){.modal .modal-full-height.modal-lg{width:1000px;max-width:1000px}}@media (min-width:992px){.modal .modal-side{position:absolute;bottom:10px;right:10px;margin:0;width:400px}}
+    

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="./css/img/favicon-16x16.png">
+    <script src="./js/index.js"></script>
+
+    <title>Mini-cursos | Pagina Principal</title>
+</head>
+
+<body>
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-sm">
+                <a href="#">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <div class="col-sm">
+                <img id="logo" src="./css/img/logo Sec.png" alt="">
+            </div>
+
+            <div class="col-sm" align="right">
+                <img id="esmad" src="css/img/esmad.png" alt="ESMAD">
+            </div>
+        </div>
+        <hr>
+        <!-- Nav tabs -->
+        <div class="row">
+            <div class="col-3">
+                <ul class="navbar-nav">
+                    <li class="nav">
+                        <a id="salutUser"></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-6">
+                <ul class="nav nav-tabs|pills" id="navId">
+                    <li class="nav-item">
+                        <a href="#divCurso" class="nav-link" role="button" aria-expanded="false">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#divFormad" class="nav-link">Formadores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="idConfig" href="config.html" class="nav-link">Configurações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Sobre</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-3" align="center">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav justify-content-end">
+                        <a id="idlogin" href="#" data-toggle="modal" data-target="#loginModal">Entrar </a>
+                        <a id="idRegister" href="#" data-toggle="modal" data-target="#modalRegisterForm">|Registar</a>
+                        <a id="idLogout" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="row mt-3 pt-3">
+                <div class="col-sm">
+                    <div class="card" id="card1">
+                        <img class="card-img" src="CSS/IMG/imgCurso1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title mt-2">Title</h2>
+                            <p class="card-text">
+                                <h4>Text</h4>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" id="card2">
+                        <img class="card-img-top" src="CSS/IMG/imgCurso1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                    <div class="card mt-2" id="card3">
+                        <img class="card-img-top" src="CSS/IMG/imgCurso1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <p class="card-text">Text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jumbotron com descrição do site -->
+        <div class="row mt-5">
+            <div class="jumbotron">
+                <h4>
+                    Mini-cursos
+                </h4>
+                <p class="pt-3">
+                    Este projeto tem como objetivo o conceção e implementação de uma plataforma de apoio à gestão de cursos de curta duração
+                    da ESMAD, onde se inclui a agenda dos cursos de curta duração a oferecer, formadores, testemunhos, entre
+                    outros.
+
+                </p>
+            </div>
+        </div>
+
+        <!-- curso -->
+        <div class="row">
+            <div id="divCurso" class="col-md" align="center">
+                <h2>Cursos</h2>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col ml-md-auto" align="right">
+                <button id="addCurso" class="btn" data-toggle="modal" data-target="#modalAdicionarForm">
+                    <i class="fas fa-plus-circle"></i> Adicionar Curso</button>
+            </div>
+        </div> -->
+        <div class="mt-2" id="idCardCatal"></div>
+
+        <!-- formadores -->
+        <div class="row">
+            <div id="divFormad" class="col-md mt-5" align="center">
+                <h2>Formadores</h2>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col ml-md-auto" align="right">
+                <button id="addFormador" class="btn" data-toggle="modal" data-target="#modalAddFormadorForm">
+                    <i class="fas fa-plus-circle"></i> Adicionar Formador</button>
+            </div>
+        </div> -->
+        <div class="mt-3" id="idCardFormad">
+
+        </div>
+
+    </div>
+
+
+
+    <div class="modal" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <form id="frmRegister" action="">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">REGISTO</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="nameUser">Nome</label>
+                            <input id="nameUser" type="text" class="form-control validate" required>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="emailUser">Email</label>
+                            <input id="emailUser" type="email" class="form-control validate" required>
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="pass">Password</label>
+                            <input type="password" id="pass" class="form-control validate" required>
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="confirmPass">Confirmar Password</label>
+                            <input type="password" id="confirmPass" class="form-control validate" required>
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="">Tipo Utilizador</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Formador">
+                                <label class="form-check-label" for="gridRadios1">Formador</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Estudante">
+                                <label class="form-check-label" for="gridRadios2">Estudante</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button class="btn btn-dark" type="submit">Registar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <form id="frmLogin" action="">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">Entrar</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-3">
+
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="validEmail">Email</label>
+                            <input type="email" id="validEmail" class="form-control validate" required>
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="validPass">Password</label>
+                            <input type="password" id="validPass" class="form-control validate" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button id="btnEntrar" class="btn btn-dark" type="submit">Entrar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- <div class="modal fade right" id="modalAdicionarForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <form id="formAddCourse" action="">
+            <div class="modal-dialog modal-full-height modal-right" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">Adicionar Curso</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="idtitulo">Titulo Curso</label>
+                            <input type="text" id="idtitulo" class="form-control validate" maxlength="30" required>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="idDescricao">Descrição</label>
+                            <textarea id="idDescricao" cols="39" rows="3" maxlength="120"></textarea>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="idData">Data Realização</label>
+                            <input type="date" id="idData" class="form-control validate" maxlength="10" required>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="idHora">Hora Realização</label>
+                            <input type="time" id="idHora" class="form-control validate" maxlength="5" required>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="idPreco">Preço</label>
+                            <input type="number" id="idPreco" class="form-control validate" maxlength="4" placeholder="€" required>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="idPrecoEsp">Preço Especial</label>
+                            <input type="number" id="idPrecoEsp" class="form-control validate" maxlength="4" placeholder="€" required>
+                            <p id="obs">(obs:Preço para estudantes / membros IPP ou outros)</p>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="idSelForm">Formador Responsável</label>
+                            <select id="idSelForm" class="form-control validate" required>
+                            </select>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="idSelParc">Instituição Parceira</label>
+                            <select id="idSelParc" class="form-control validate" required>
+                                <option value="">Escolher</option>
+                                <option value="Universidad de Málaga">Universidad de Málaga</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="idSelTags">Categoria</label>
+                            <select id="idSelTags" class="form-control validate" required>
+                            </select>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="idLink">Link para foto</label>
+                            <input type="text" id="idLink" class="form-control validate">
+                        </div>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button class="btn btn-dark" type="submit">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal fade right" id="modalAddFormadorForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <form id="frmFormador" action="">
+            <div class="modal-dialog modal-full-height modal-right" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">Adicionar Formador</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="nameformador">Nome</label>
+                            <input id="nameformador" type="text" class="form-control validate" maxlength="30" required>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="txtLinkFotoF">link Foto</label>
+                            <input id="txtLinkFotoF" type="text" class="form-control validate">
+                        </div>
+
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="txtFormacao">Formação</label>
+                            <input type="text" id="txtFormacao" class="form-control validate" maxlength="50" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label data-error="wrong" data-success="right" for="descVitae">Resume C.Vitae</label>
+                            <textarea id="descVitae" cols="39" rows="8" maxlength="120"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button class="btn btn-dark" type="submit">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div> -->
+
+    <div class="modal" id="modalSeeForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+        <div class="modal-dialog">
+
+            <div class="highlight">
+                <h2>
+                    <a id="modalNameFormad" href=""></a>
+                </h2>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img id="modalFormadorlink" src="" />
+                    </div>
+                    <div class="col-sm"></div>
+                    <div class="col-sm-7">
+                        <div class="">
+                            <p class="pt-2">Formação:</p>
+                            <br>
+                            <h6 class="pr-3" id="modalFormationFormad"></h6>
+                            <!-- <p>Mini-cursos Associados:</p>
+                            <h6 id="modalCursoFormad">safsafas</h6> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="pl-3">C.Vitae resumido:</p>
+                    <h6 class="pl-3 pr-3" id="modalCVFormad"></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- botão para enviar o utilizador para o topo da pagina -->
+    <a id="navBar" class="btn btn-dark rounded-circle" role="button" style="position: fixed;float: bottom;bottom: 15px;right: 15px;z-index: 100;color: white"
+        onclick="scrollToTop(1000)">
+        <i class="fas fa-angle-double-up"></i>
+    </a>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
