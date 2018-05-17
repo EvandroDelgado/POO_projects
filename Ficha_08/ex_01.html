@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<script src="ex_01.js"></script>
+<title>Exercicio 1 ficha 8</title>
+</head>
+<body>
+<div>
+    <form action="" id="myForm">
+        <div class="form-group">
+            <label for="perso">Nome da personalidade</label>
+            <input type="text" name="" id="perso" required>
+        </div>
+        <div class="form-group">
+                <label for="nasci">Ano de nascimento</label>
+                <input type="date" name="" id="nasci" required>
+        </div>
+        <div class="form-group">
+                <label for="nacion">Nacionalidade </label>
+                <select name="" id="nacion" required>
+                    <option value="desconhecida">Escolher:</option>
+                    <option value="America Norte">America Norte</option>
+                    <option value="America Sul">America Sul</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Europa">Europa</option>
+                    <option value="Asia">Asia</option>
+                </select>
+        </div>
+        <div class="form-group">
+                <label for="obra">Principal obra ou criação</label>
+                <input type="text" name="" id="obra" required>
+        </div>
+         <div class="form-group">
+                <label for="foto">Link para foto</label>
+                <input type="url" name="" id="foto" required>
+        </div>
+        <input type="submit" value="Submeter">
+        <input type="reset" value="Limpar">
+        <input id="btnTodos" type="button" value="Remover Todos">
+    </form>
+    <div class="mt-3">
+        <table class="table" id="myTabela"></table>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
