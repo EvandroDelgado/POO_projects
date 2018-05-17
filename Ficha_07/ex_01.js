@@ -1,16 +1,15 @@
 window.onload = function () {
-    
-    document.getElementById("btnSubmit").addEventListener("click", function () {
-        let myEmail = document.getElementById("email")
-        let myPass = document.getElementById("password")
 
-        alert(myPass.value+"#"+myEmail.value)
+    let myForm = document.getElementById("myForm")
+    let myEmail = document.getElementById("email")
+    let myPass = document.getElementById("password")
+
+    myForm.addEventListener("submit", function (event) {
+        alert(myPass.value + "#" + myEmail.value)
+        event.preventDefault()
     })
-   
-    document.getElementById("btnlimpar").addEventListener("click", function () {
-        document.getElementById("email").value = ""
-        document.getElementById("password").value= ""
-        
-        document.getElementById("email").focus()
+
+    myForm.addEventListener("reset", function () {
+        myEmail.focus()
     })
 }
