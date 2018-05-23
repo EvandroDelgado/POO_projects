@@ -62,12 +62,7 @@ a.nav-link{
     width: 100%;
 }
 
-#addCurso{
-    background-color: orangered;
-    color: white;
-}
-
-#addFormador{
+#addCurso,#search,#addFormador{
     background-color: orangered;
     color: white;
 }

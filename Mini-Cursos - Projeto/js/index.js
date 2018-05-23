@@ -95,18 +95,21 @@ window.onload = function () {
     let optSalut = document.getElementById("salutUser")
     let optRegister = document.getElementById("idRegister")
     let optConfig = document.getElementById("idConfig")
+    let tagId = document.getElementById("searchTag")
 
     //verifica se o utilizador esta logado
     var estadoLogin = localStorage.getItem("estadoLogin")
     console.log(estadoLogin)
     if (estadoLogin == "true") {
-    
+
         //apanha o id do utilizador logado na local Storage
         let userId = JSON.parse(localStorage.getItem("idUser"))
-
+        console.log(userId)
         //faz refresh ao catalogo de cursos
-        renderCatalog(userId)
+
+        renderCatalog(userId, tagId.value)
         renderCatalog2()
+        renderTags()
 
         // Alterar navbar 
         optLogin.style.display = 'none'
@@ -122,7 +125,7 @@ window.onload = function () {
             if (userId == users[i]._id) {
 
                 tipoUser = users[i]._type
-                
+
                 optSalut.innerHTML = 'Bem vindo&nbsp;<b>' + users[i]._name + '</b>!'
             }
         }
@@ -132,36 +135,18 @@ window.onload = function () {
             console.log(tipoUser == "admin")
             optConfig.style.display = 'block'
         }
-        else{
+        else {
             optConfig.style.display = 'none'
         }
         optSalut.style.display = 'block'
 
-
-        // LOGOUT
-        optLogout.addEventListener("click", function () {
-            userId = 0
-            optLogin.style.display = 'block'
-            optRegister.style.display = 'block'
-            optLogout.style.display = 'none'
-            optSalut.style.display = 'none'
-            optConfig.style.display = 'none'
-            //o estadologin passa a ser false e guarda na local storage
-            let estadoLogin = "false"
-            localStorage.setItem("estadoLogin", JSON.stringify(estadoLogin))
-            //como o userId passa a ser zero e guarda na local storage
-            localStorage.setItem("idUser", JSON.stringify(userId))
-
-            renderCatalog()
-        })
-
-
     }
     else {
 
-        renderCatalog(userId)
+        renderCatalog()
         renderCatalog2()
-        
+        renderTags()
+
         // Esconder opções de autenticação
         optLogout.style.display = 'none'
         optSalut.style.display = 'none'
@@ -298,8 +283,8 @@ window.onload = function () {
                 let estadoLogin = "true"
                 localStorage.setItem("estadoLogin", estadoLogin)
                 localStorage.setItem("idUser", userId)
-               /*  let estadoLogin = "true"
-                localStorage.setItem("estadoLogin", JSON.stringify(estadoLogin)) */
+                /*  let estadoLogin = "true"
+                 localStorage.setItem("estadoLogin", JSON.stringify(estadoLogin)) */
 
 
             } else {
@@ -310,38 +295,67 @@ window.onload = function () {
             event.preventDefault()
         })
 
-        // LOGOUT
-        optLogout.addEventListener("click", function () {
-            userId = 0
-            optLogin.style.display = 'block'
-            optRegister.style.display = 'block'
-            optLogout.style.display = 'none'
-            optSalut.style.display = 'none'
-            optConfig.style.display = 'none'
-            //o estadologin passa a ser false e guarda na local storage
-            let estadoLogin = "false"
-            localStorage.setItem("estadoLogin", JSON.stringify(estadoLogin))
-            //como o userId passa a ser zero e guarda na local storage
-            localStorage.setItem("idUser", JSON.stringify(userId))
-
-            renderCatalog()
-        })
-
     }
+
+    // LOGOUT
+    optLogout.addEventListener("click", function () {
+        userId = 0
+        optLogin.style.display = 'block'
+        optRegister.style.display = 'block'
+        optLogout.style.display = 'none'
+        optSalut.style.display = 'none'
+        optConfig.style.display = 'none'
+        //o estadologin passa a ser false e guarda na local storage
+        let estadoLogin = "false"
+        localStorage.setItem("estadoLogin", JSON.stringify(estadoLogin))
+        //como o userId passa a ser zero e guarda na local storage
+        localStorage.setItem("idUser", JSON.stringify(userId))
+
+        renderCatalog()
+    })
+
+    // procurar curso por categorias
+    let btnSearch = document.getElementById("search")
+    btnSearch.addEventListener("click", function (event) {
+
+        //Buscar o valor do select
+        let tagId = document.getElementById("searchTag")
+
+        //apanha o id do utilizador logado na local Storage
+        let userId = JSON.parse(localStorage.getItem("idUser"))
+
+        // 2. Renderizar catálogo
+        renderCatalog(userId, tagId.value)
+
+    })
 
 }
 
+
+
 // Função que vai alimentar o meu catálogo de cursos
-function renderCatalog(userId = 0) {
+function renderCatalog(userId = 0, tagId = "All") {
 
-    // 1. Iterar sobre o array de cursos
-
-    // 2. Para cada curso vou definir uma Card e compô-la com os dados do objeto
+    //Para cada curso vou definir uma Card e compô-la com os dados do objeto
     let strHtmlCard = ""
-    for (var i = 0; i < courses.length; i++) {
-        //se utilizador estiver logado ou não apresenta todos os cards
-        //if (userId == 0 || userId != 0) {
+    let cursosFiltrados = []
 
+    for (let j = 0; j < courses.length; j++) {
+
+        //se utilizador estiver logado ou não apresenta todos os cards
+        if ((userId == 0 && tagId == "All") ||
+            (userId != 0 && tagId == "All") ||
+            (tagId == courses[j]._tagId)) {
+
+            //preenche o array com os cursos filtrados
+            cursosFiltrados.push(courses[j])
+
+        }
+        
+    }
+
+    for (let i = 0; i < cursosFiltrados.length; i++) {
+        
         // Inicia a linha
         if (i % 3 == 0) {
             strHtmlCard += `<div class="row">`
@@ -350,15 +364,15 @@ function renderCatalog(userId = 0) {
         // Cria a card
         strHtmlCard += `<div class="col-sm-4 mt-2">
                 <div class="card" style="width: 22rem;height:20rem">
-                    <img class="card-img-top" src="${courses[i]._link}" alt="Card image cap">
+                    <img class="card-img-top" src="${cursosFiltrados[i]._link}" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">${courses[i]._title}</h5>
-                        <p class="card-text">${courses[i]._description}</p>`
+                        <h5 class="card-title">${cursosFiltrados[i]._title}</h5>
+                        <p class="card-text">${cursosFiltrados[i]._description}</p>`
         if (userId == 1 || userId == 2) {
-            strHtmlCard += `<a id="${courses[i]._id}" class="btn btn-dark verMais" type="button" href="./ver_cursos.html">VER MAIS</a>`
-            strHtmlCard += `<a id="${courses[i]._id}" href="#" class="btn btn-danger ml-3 remove">REMOVER</a>`
+            strHtmlCard += `<a id="${cursosFiltrados[i]._id}" class="btn btn-dark verMais" type="button" href="./ver_cursos.html">VER MAIS</a>`
+            strHtmlCard += `<a id="${cursosFiltrados[i]._id}" href="#" class="btn btn-danger ml-3 remove">REMOVER</a>`
         } else {
-            strHtmlCard += `<a id="${courses[i]._id}" class="btn btn-dark verMais" type="button" href="./ver_cursos.html">VER MAIS</a>`
+            strHtmlCard += `<a id="${cursosFiltrados[i]._id}" class="btn btn-dark verMais" type="button" href="./ver_cursos.html">VER MAIS</a>`
         }
         strHtmlCard += `</div>
                 </div>      
@@ -368,7 +382,7 @@ function renderCatalog(userId = 0) {
         if (i % 3 == 2) {
             strHtmlCard += `</div>`
         }
-        //}
+
     }
     //preencher o html com as cards
     let coursesCatalog = document.getElementById("idCardCatal")
@@ -411,7 +425,7 @@ function renderCatalog(userId = 0) {
             } else {
                 let estadoLogin = "true"
                 localStorage.setItem("estadoLogin", estadoLogin)
-                localStorage.setItem("idUser",  JSON.stringify(userId))
+                localStorage.setItem("idUser", JSON.stringify(userId))
             }
         })
     }
@@ -491,6 +505,18 @@ function verCardFormador(id) {
             modalformadorlink.setAttribute("src", formadores[i]._photo)
         }
     }
+}
+
+// Preencher combobox com categorias para o filtro
+function renderTags() {
+
+    //Criar o HTML (option) para todos os tags
+    let strHtml = "<option value='All'>Todos</option>"
+    for (let i = 0; i < tags.length; i++) {
+        strHtml += `<option value='${tags[i]._id}'>${tags[i]._name}</option>`
+    }
+    let selTags = document.getElementById("searchTag")
+    selTags.innerHTML = strHtml
 }
 
 //Sobe a barra de navegação para o topo

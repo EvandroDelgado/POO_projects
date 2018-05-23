@@ -12,7 +12,6 @@ window.onload = function () {
 
     if (localStorage.getItem("Users")) {
         myUsers = JSON.parse(localStorage.getItem("Users"))
-        console.log(myCourses)
     }
 
     var estadoLogin = JSON.parse(localStorage.getItem("estadoLogin"))

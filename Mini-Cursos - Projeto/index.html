@@ -132,7 +132,16 @@
             <div id="divCurso" class="col-md" align="center">
                 <h2>Cursos</h2>
             </div>
+            
         </div>
+        <div align="right">
+            <label for="searchTag"><h6>Categoria:</h6></label>
+            <select class="rounded pl-3" id="searchTag" style="height: 39px;width: 200px">
+                <option value="All">Todos</option>
+            </select>
+            <button id="search" class="btn" style="height: auto;">Pesquisar</button>
+        </div>
+        
         <!-- <div class="row">
             <div class="col ml-md-auto" align="right">
                 <button id="addCurso" class="btn" data-toggle="modal" data-target="#modalAdicionarForm">
@@ -224,7 +233,7 @@
                     <div class="modal-body mx-3">
 
                         <div class="form-group mb-2">
-                            <label data-error="wrong" data-success="right" for="validEmail">Email</label>
+                            <label data-error="wrong" data-success="right" for="validEmail" >Email</label>
                             <input type="email" id="validEmail" class="form-control validate" required>
                         </div>
 
