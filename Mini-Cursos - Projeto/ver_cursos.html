@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,14 +10,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="./css/img/favicon-16x16.png">
-    <script src="./js/ver_cursos.js"></script>
-    
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
     <title>Mini-cursos | Curso</title>
 </head>
 
 <body>
-    <div class="container pt-3 cardView">
+    <div class="container pt-2 cardView">
         <div class="row">
             <div class="col-sm">
                 <a href="#">
@@ -31,11 +30,11 @@
                 </a>
             </div>
             <div class="col-sm">
-                <img id="logoCursos" src="./css/img/logo Sec.png" alt="">
+                <img id="logoCursos" src="img/logo Sec.png" alt="">
             </div>
 
             <div class="col-sm" align="right">
-                <img id="esmad" src="css/img/esmad.png" alt="ESMAD">
+                    <a href="https://esmad.ipp.pt"><img id="esmad" src="img/esmad.png" alt="ESMAD"></a>
             </div>
         </div>
         <hr>
@@ -44,13 +43,13 @@
             <div class="col-3">
                 <ul class="navbar-nav">
                     <li class="nav">
-                        <a id="salutUser"></a>
+                        <img id="imageUser" src="" class="rounded-circle float-left ml-3" alt="" width="50" height="50">
                     </li>
                 </ul>
             </div>
 
             <div class="col-sm-6">
-                
+
             </div>
             <div class="col-3" align="center">
                 <ul class="navbar-nav ml-auto">
@@ -63,26 +62,32 @@
             </div>
         </div>
 
-        <!-- curso -->
         <div>
             <div>
                 <a id="idvoltar" href="./index.html">
-                    <u>VOLTAR</u>
+                    <u class="ml-3">VOLTAR</u>
                 </a>
             </div>
             <div id="divCurso" align="center">
-                <h2>Cursos</h2>
+                <h2>Curso</h2>
+                <div align="right">
+                    <button id="addParc" class="btn" data-toggle="modal" data-target="#modalAddPartnerForm">
+                        <i class="fas fa-plus-circle"></i> Criar Parceiro</button>
+                </div>
             </div>
         </div>
 
-        <div id="divCurso" class="container mt-5">
+        <div id="divCurso" class="container mt-2">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-4">
                     <div id="idCursoImg" class="card">
-                        
+
+                    </div>
+                    <div id="divPont" align="center">
+                        <button id="addPont" type="button" class="btn btn-block mt-1" data-toggle="modal" data-target="#pontuarModalCenter">Pontuar Curso</button>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <h6>Titulo:
                         <a id="getTitulo"></a>
                     </h6>
@@ -112,27 +117,68 @@
                         </h6>
                     </p>
                     <p>
-                        <h6>Instituição Parceira:
-                            <a id="getInstit"></a>
+                        <h6>Categorias:
+                            <a id="getCateg"></a>
                         </h6>
                     </p>
+
                 </div>
                 <div class="col-sm-5">
                     <h6>Descrição:
                         <a id="getDescricao"></a>
                     </h6>
+                    <p>
+                        <h6>Pontuação:
+                            <a id="getPontuacao">0</a>
+                        </h6>
+                    </p>
                 </div>
+
             </div>
             <div class="row">
-                <div class="col-sm">
+                <div id="divParceria" class="col-sm-">
+                    <div class="mt-5 ml-3" >
+                        <h6>Informações Parceiro Curso</h6>
+                    </div>
+                    <div id="divCardParc" class="card mb-3 ml-3" style="width:600px; height:400px">
+                        <div class="card-body text-center parcery bg-white">
+                            <h4 class="card-title">
+                                <strong id="nomeParc"></strong>
+                            </h4>
+                            <a id="siteParce" target="_blank" style="color: blue">
 
+                            </a>
+                        </div>
+                        <div id="myMap" style="width:598px; height:300px"></div>
+                        <!-- <div align="center"> -->
+                        <div class="">
+                            <div class="col-sm- mb">
+                                <button id="editParc" class="btn btn-block border border-white" data-toggle="modal" data-target="#modalAddPartnerForm">
+                                    Editar Parceiro</button>
+                            </div>
+                            <div class="col-sm-">
+                                <button id="removParcCurso" class="btn btn-block border border-white">
+                                    Remover Parceiro Curso</button>
+                            </div>
+                            <div class="col-sm-">
+                                <button id="eliminParc" class="btn btn-block border border-white">
+                                    Eliminar Parceiro</button>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm mt-5">
+
+                <div id="comentarDiv" class="col-sm ml-4">
                     <h5>Comentários</h5>
+                    <div id="TabelaComments">
+
+
+                    </div>
                     <form id="formComent">
-                        <input class="form-control" type="text" id="txtComent" placeholder="Comentar">
+                        <input class="form-control mt-2" type="text" id="txtComent" placeholder="Comentar" required>
                         <div class="text-right mt-1">
-                            <input class="btn" type="submit">
+                            <input id="btnComent" class="btn" type="submit">
                         </div>
                     </form>
                 </div>
@@ -162,12 +208,27 @@
 
                         <div class="form-group mb-2">
                             <label data-error="wrong" data-success="right" for="pass">Password</label>
-                            <input type="password" id="pass" class="form-control validate" required>
+                            <input type="password" id="pass" class="form-control validate" minlength="6" required>
                         </div>
 
                         <div class="form-group mb-2">
                             <label data-error="wrong" data-success="right" for="confirmPass">Confirmar Password</label>
-                            <input type="password" id="confirmPass" class="form-control validate" required>
+                            <input type="password" id="confirmPass" class="form-control validate" minlength="6" required>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="idUseLink">Foto perfil</label>
+                            <input type="text" id="idUseLink" class="form-control validate">
+                        </div>
+                        <label data-error="wrong" data-success="right" for="">Tipo Utilizador</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Formador">
+                            <label class="form-check-label" for="gridRadios1">Formador</label>
+                        </div>
+                        <div class="form-group mb-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Estudante">
+                                <label class="form-check-label" for="gridRadios2">Estudante</label>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
@@ -197,7 +258,7 @@
 
                         <div class="form-group mb-2">
                             <label data-error="wrong" data-success="right" for="validPass">Password</label>
-                            <input type="password" id="validPass" class="form-control validate" required>
+                            <input type="password" id="validPass" class="form-control validate" minlength="6" required>
                         </div>
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
@@ -269,6 +330,78 @@
             </div>
         </form>
     </div>
+
+    <div class="modal fade right" id="modalAddPartnerForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <form id="frmPartner" action="">
+            <div class="modal-dialog modal-full-height modal-right" role="document" style="height: 100%;">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 id="tituloModal" class="modal-title w-100 font-weight-bold">Adicionar Parceiro</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="namePartner">Nome</label>
+                            <input id="namePartner" type="text" class="form-control validate" maxlength="30" required>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label data-error="wrong" data-success="right" for="txtLinkSite">link Site</label>
+                            <input id="txtLinkSite" type="link" class="form-control validate">
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label data-error="wrong" data-success="right" for="txtEndereco">Endereço</label>
+                            <input type="text" id="txtEndereco" class="form-control validate" required>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center mt-2 pt-5">
+                        <button class="btn btn-dark" type="submit">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="pontuarModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Pontuar curso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formPont" action="">
+                        <div class="form-group">
+                            <div class="range range-warning">
+                                <input id="pontuar" type="range" name="range" min="0" max="5" value="0" onchange="rangeWarning.value=value" width="100px">
+                                <output id="rangeWarning">0</output>
+                            </div>
+                            
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="btnPontuar" class="btn" type="submit" style="background-color: orangered;color: white">Pontuar</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/login.js"></script>
+
+    <script src="./js/ver_cursos.js"></script>
+
+    <!--script api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCctSRL8R9fHh4_SF9a_a3abKV0YMkoi6I&callback=initMap" async></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
