@@ -1,5 +1,5 @@
 # POO_Exercices/Project
-I am from the Polytechnic Institute of Porto in the course Technologies and Information Systems for Web.
+I am from the Polytechnic Institute of Porto in the course Web Information Systems and Technologies.
 This exercices is made in HTML/CSS and JavaScript
 
 - I add the exercices files 1 to 8 complete.
